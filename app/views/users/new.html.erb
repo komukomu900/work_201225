@@ -1,0 +1,16 @@
+<h1>登録</h1>
+<%= form_with(model: @user, local: true) do |f| %>
+  <div class="name_registration">
+    <%= f.text_field :name, placeholder: "名前" %>
+  </div>
+  <div class="email_registration">
+    <%= f.email_field :email, placeholder: "メール" %>
+  </div>
+  <div class="password_registration">
+    <%= f.password_field :password, placeholder: "パスワード" %>
+  </div>
+  <div class="password_registration">
+    <%= f.password_field :password_confirmation, placeholder: "パスワード確認" %>
+  </div>
+  <%= f.submit %>
+<% end %>
