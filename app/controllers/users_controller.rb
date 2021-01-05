@@ -14,6 +14,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    favorite = Favorite.where(user_id: current_user.id).pluck(:blog_id)
+    @favorite_list = Blog.find(favorite)
   end
 
   def destroy

@@ -1,3 +1,9 @@
 <h1>詳細</h1>
 <%= @user.name %>
 <%= @user.email %>
+<p>お気に入り一覧</p>
+<% @favorite_list.each_with_index do |f, n| %>
+  <p><%= n+1 %></p>
+  title:<%= f.title %><br>
+  content:<%= f.content %><br>
+<% end %>
